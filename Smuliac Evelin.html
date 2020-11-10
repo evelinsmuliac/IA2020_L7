@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pagina profil Smuliac Evelin</title>
+<style>
+body { background-color: pink;}
+h1 {color: #9933ff;}
+h2 {color: purple;}
+h3 {color: rgb(204, 0, 153);}
+p {color: #660033;}
+
+table {background-color: rgb(255, 153, 204);}
+ul {background-color: rgb(204, 102, 255);}
+
+table, tr, td, ul {border: 3px blue;}
+tr:hover {background-color: #ffccff;}
+
+h1 {font-family: "Times New Roman", Times, serif;
+	font-style: bold;
+	font-size: 20px;}
+h2 {font-family: "Times New Roman", Times, serif;
+	font-style: bold;
+	font-size: 18px;}
+h3 {font-family: "Times New Roman", Times, serif;
+	font-style: bold;
+	font-size: 16px;}
+p {font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;}
+	
+img {border: 3px #1a001a;
+	border-radius: 12px;
+	width: 400px;
+	display: block;
+	padding: 2px;
+	margin: left;
+	opacity: 1;}
+</style>
+
+<script>
+function veziViitor()
+{
+	document.getElementById("numeProfil").innerHTML = "tehnician operatiuni telecomunicatii - Huawei";
+	document.getElementById("educatie").innerHTML = "Pe perioada facultatii as vrea sa aprofundez materiile care ma intereseaza si ma vor ajuta pe viitor in domeniul de telecomunicatii.";
+	document.getElementById("pozaProfil").src = "poza profil 2.jpg";
+	document.body.style.backgroundColor = "#9999ff";
+	document.getElementById("numeProfil").style.fontSize = "35px";
+	document.getElementById("listahobby").style.fontSize = "30px";
+	document.getElementById("listadiscipline").style.fontSize = "35px";
+    
+	var tabelEducatie = document.getElementById("tabel");
+	tabelEducatie.rows[1].cells[0].innerHTML = "Grafica Asistata de Calculator";
+	tabelEducatie.rows[1].cells[2].innerHTML = "II";
+	tabelEducatie.rows[3].cells[0].innerHTML = "Tehnologii web";
+	tabelEducatie.rows[3].cells[2].innerHTML = "III";
+	tabelEducatie.rows[3].cells[3].innerHTML = "1";
+	
+	var par = document.getElementsByTagName("h1");
+	var i;
+		for( i=0; i<par.length; i++ )
+		{
+			par[i].style.color = "#6600cc";
+		}
+	
+	var par2 = document.getElementsByTagName("h3");
+	var j;
+		for( j=0; j<par2.length; j++ )
+		{
+			par2[i].style.color = "#333399";
+		}
+		
+	document.getElementById("pozaProfil").style.opacity = "0.8";
+	document.getElementById("pozaProfil").style.border = "6px";
+		
+}
+
+function arVarst()
+{
+	var azi = new Date;
+	var varstaMea;
+	var anNasc = document.getElementById("varsta").innerHTML;
+	varstaMea = azi.getFullYear() - parseInt(anNasc);
+	document.getElementById("varsta").innerHTML = varstaMea;
+}
+</script>
+</head>	
+
+<body>
+
+<h1>Profil</h1>
+
+<h1 id="numeProfil">Smuliac Evelin Larisa</h1>
+
+<h3 id="email">smuliac_evelin@yahoo.com</h3>
+
+<p onmouseover = "arVarst()" id="varsta">2001</p>
+
+<button onclick="veziViitor()">Alta viata</button>
+
+<img id="pozaProfil" src="poza profil 1.jpg" alt="Smuliac Evelin" width="400" height="390">
+
+
+<h3 id="educatie">"Radacinile educatiei sunt amare, dar fructul este dulce."-Aristotel</h3>
+
+<h3 id="listadiscipline">Liste de discipline</h3>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<table id="tabel" style="width:100%">
+	<tr>
+		<th>Nume disciplina</th>
+		<th>Fisa disciplinei</th>
+		<th>An</th>
+		<th>Semestru</th>
+    </tr>
+    <tr>
+    	<td>Programarea calculatoarelor - limbaje</td>
+        <td><a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/04.pdf">Link catre fisa disciplinei 1</a></td>
+        <td>I</td>
+        <td>1</td>
+    </tr>
+    <tr>
+    	<td>Informatica aplicata</td>
+        <td><a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/06.pdf">Link catre fisa disciplinei 2</a></td>
+        <td>I</td>
+        <td>1</td>
+    </tr>
+    <tr>
+    	<td>Fizica superioara</td>
+        <td><a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/10.pdf">Link catre fisa disciplinei 3</a></td>
+        <td>I</td>
+        <td>2</td>
+    </tr>
+    <tr>
+    	<td>Componente si circuite electronice pasive</td>
+        <td><a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/05.pdf">Link catre fisa disciplinei 4</a></td>
+        <td>I</td>
+        <td>1</td>
+</table>
+<h3 id="listahobby">Hobby-uri</h3>
+<ul>
+<li>arta, desenatul, pictura</li>
+<li>calatoritul</li>
+</ul>
+
+
+</body>
+</html>
